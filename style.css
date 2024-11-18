@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+#game-container {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  background-color: #ccc;
+  border: 2px solid #333;
+  display: grid;
+  grid-template-columns: repeat(20, 40px);
+  grid-template-rows: repeat(20, 40px);
+}
+
+.characters {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s linear, filter 0s ease-in-out;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: none;
+}
+
+#player {
+  background-image: url("./images/characters/player.png");
+  z-index: 10;
+}
+
+#enemy {
+  background-image: url("./images//characters/enemy.png");
+}
